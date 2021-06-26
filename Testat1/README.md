@@ -1,4 +1,4 @@
-# Testat 1: Regulare Ausdruecke v1.2
+# Testat 1: Regulare Ausdruecke
 
 ## Aufgabe 
 Entwickeln Sie zur Unterst¨utzung der Systemumstellung ein Tool, das das Format der zu importierenden Studierendendaten auf Konsistenz mit Best-DBMS prüft.
@@ -15,4 +15,4 @@ sudo python tool.py
 ```
 ## Ausgabe
 
-Das Tool soll die 93 falsch formatierten Werte auf der Kommandozeile getrennt durch Zeilenumbr¨uche ausgeben
+Das Tool soll die 98 falsch formatierten Werte auf der Kommandozeile getrennt durch Zeilenumbr¨uche ausgeben
