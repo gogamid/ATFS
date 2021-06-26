@@ -1,4 +1,4 @@
-# Testat 1: Regulare Ausdruecke
+# Testat 1: Regulare Ausdrueckels
 
 ## Aufgabe 
 Entwickeln Sie zur Unterst¨utzung der Systemumstellung ein Tool, das das Format der zu importierenden Studierendendaten auf Konsistenz mit Best-DBMS prüft.
