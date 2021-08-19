@@ -26,7 +26,7 @@ cd ATFS/Testat2
 Brainfuck Datei [`example_brainfuck_prog_v_1_0.bf`](./example_brainfuck_prog_v_1_0.bf) als Eingabe
 
 ```bash
-java SytaxChecker example_brainfuck_prog_v_1_0.bf
+java SyntaxChecker example_brainfuck_prog_v_1_0.bf
 ```
 
 Eingabe
