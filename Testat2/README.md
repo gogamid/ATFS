@@ -1,4 +1,4 @@
-# Testat 1: Parserentwicklung mit JavaCC
+# Testat 2: Parserentwicklung mit JavaCC
 View in GitHub: https://github.com/gogamid/ATFS/blob/main/Testat2/README.md
 ## Aufgabe 
 
