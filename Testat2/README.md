@@ -19,7 +19,7 @@ Compile um Java und Class Dateien zu erstellen
 
 ```bash
 git clone https://github.com/gogamid/ATFS
-cd Testat2
+cd ATFS/Testat2
 ./compile.sh
 ```
 
