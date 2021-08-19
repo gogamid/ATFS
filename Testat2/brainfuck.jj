@@ -1,0 +1,82 @@
+
+
+PARSER_BEGIN(SyntaxChecker)
+import java.util.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+public class SyntaxChecker {
+	public static Scanner ob = new Scanner(System.in);
+	public static int ptr; // Data pointer
+	public static int length = 256;
+	public static byte memory[] = new byte[length]; 
+  	
+    public static void main(String[] args) {
+      String content="";
+      try {
+	 content = Files.readString(Paths.get(args[0]), StandardCharsets.US_ASCII);
+		}
+	  catch(Exception e) {
+  		System.out.println("Cannot read file " + e.getMessage());
+	}
+ 
+        try {
+            new SyntaxChecker(new java.io.StringReader(content)).F();
+        } catch (Throwable e) {
+            // Catching Throwable is ugly but JavaCC throws Error objects!
+            System.out.println("Syntax check failed: " + e.getMessage());
+        }
+    }
+}
+
+PARSER_END(SyntaxChecker)
+
+SKIP:  { " " | "\t" | "\n" | "\r"  | "\\"  }
+TOKEN: {
+  < INC_V:	"+" > {
+				SyntaxChecker.memory[SyntaxChecker.ptr] ++;
+				
+    }
+| < DEC_V:	"-" > {
+				SyntaxChecker.memory[SyntaxChecker.ptr] --;
+				
+ }
+| < INC_P:	">" > {
+  
+  				if (SyntaxChecker.ptr == SyntaxChecker.length - 1)//If memory is full
+					SyntaxChecker.ptr = 0;//pointer is returned to zero
+				else
+					SyntaxChecker.ptr ++;
+
+  }
+| < DEC_P:	"<" > {
+				if (SyntaxChecker.ptr == 0) // If the pointer reaches zero
+
+					// pointer is returned to rightmost memory
+					// position
+					SyntaxChecker.ptr = SyntaxChecker.length - 1;
+				else
+					SyntaxChecker.ptr --;
+  }
+| < OUT:	"." > {
+				System.out.print((char)(SyntaxChecker.memory[SyntaxChecker.ptr]));
+  }
+| < INP:	"," > {
+				SyntaxChecker.memory[SyntaxChecker.ptr] = (byte)(SyntaxChecker.ob.next().charAt(0));
+  }
+| < LOOP_B:	"[" > {} //not to implement
+| < LOOP_E:	"]" > {} //not to implement
+
+}
+
+void F(): {} { S()(MatchedBraces())* S()<EOF> }
+
+void MatchedBraces() :{}
+{
+  (S() <LOOP_B> S()[ MatchedBraces() ] S() <LOOP_E> S())+
+}
+
+void S(): {} { ( <INC_V>|<DEC_V>|<INC_P>|<DEC_P>|<OUT>|<INP>)*}
+
+
+

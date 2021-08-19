@@ -9,7 +9,21 @@ public interface SyntaxCheckerConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int NUM = 9;
+  int INC_V = 6;
+  /** RegularExpression Id. */
+  int DEC_V = 7;
+  /** RegularExpression Id. */
+  int INC_P = 8;
+  /** RegularExpression Id. */
+  int DEC_P = 9;
+  /** RegularExpression Id. */
+  int OUT = 10;
+  /** RegularExpression Id. */
+  int INP = 11;
+  /** RegularExpression Id. */
+  int LOOP_B = 12;
+  /** RegularExpression Id. */
+  int LOOP_E = 13;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -21,11 +35,15 @@ public interface SyntaxCheckerConstants {
     "\"\\t\"",
     "\"\\n\"",
     "\"\\r\"",
-    "\"(\"",
-    "\")\"",
+    "\"\\\\\"",
     "\"+\"",
-    "\"*\"",
-    "<NUM>",
+    "\"-\"",
+    "\">\"",
+    "\"<\"",
+    "\".\"",
+    "\",\"",
+    "\"[\"",
+    "\"]\"",
   };
 
 }
