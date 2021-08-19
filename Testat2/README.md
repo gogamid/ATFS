@@ -1,5 +1,5 @@
 # Testat 1: Parserentwicklung mit JavaCC
-View in GitHub: 
+View in GitHub: https://github.com/gogamid/ATFS/blob/main/Testat2/README.md
 ## Aufgabe 
 
 Aufgabe Nutzen Sie den Java Compiler Compiler [JavaCC](https://javacc.github.io/javacc/) um einen Parser und eingeschrankten
@@ -9,7 +9,7 @@ Interpreter fur Brainfuck Programme zu implementieren. JavaCC ubersetzt eine G
 soll eine Fehlermeldung ausgegeben werden. Beispiele fur syntaktische Fehler sind unerlaubte Symbole oder unausgeglichene
 Schleifenbefehle ("[" und "]"). Zusatzlich zu den Brainfuckbefehlen sind in er Eingabedatei alle Whitespace Zeichen erlaubt (`" " | "\t" | "\n" | "\r"  | "\\"` )
 
-2. Der Interpreter soll Brainfuck Programme auswerten und alle Befehle bis auf die Schleifenbefehle "[" und "]" interpretieren. Die Schleifenbefehle sollen ignoriert werden. Die Ein- und Ausgabe von Zeichen mittels der "." und "," Befehle soll auf der Kommandozeile erfolgen. Der Interpreter soll den Zustand in einem Ringpuffer von 256 Speicherzellen speichern, die Werte im Bereich von 0 - 255 enthalten durfen.
+2. Der Interpreter soll Brainfuck Programme auswerten und alle Befehle bis auf die Schleifenbefehle `"["` und` "]"` interpretieren. Die Schleifenbefehle sollen ignoriert werden. Die Ein- und Ausgabe von Zeichen mittels der "." und "," Befehle soll auf der Kommandozeile erfolgen. Der Interpreter soll den Zustand in einem Ringpuffer von 256 Speicherzellen speichern, die Werte im Bereich von 0 - 255 enthalten durfen.
 
 ## Anleitung zum Kompilieren
 
